@@ -1,5 +1,4 @@
 
-
 import UIKit
 import CoreData
 
@@ -111,7 +110,7 @@ class TodoListViewController: SwipeTableViewController  {
     
     override func updateModel(at indexPath: IndexPath) {
 
-        let deleteItem = itemArray?[indexPath.row]
+        let deleteItem = itemArray[indexPath.row]
         
         context.delete(deleteItem)
         

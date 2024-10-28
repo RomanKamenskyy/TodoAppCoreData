@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304CB3322CD017D200F1B41D /* DataModel2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 304CB3302CD017D200F1B41D /* DataModel2.xcdatamodeld */; };
 		305834122C47410100FE641F /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305834112C47410100FE641F /* CategoryTableViewController.swift */; };
 		3090FA652C49A8E400C930F4 /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3090FA642C49A8E400C930F4 /* SwipeCellKit */; };
 		3090FA672C4B209500C930F4 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090FA662C4B209500C930F4 /* SwipeTableViewController.swift */; };
 		30DD791B2C43006800629410 /* ItemUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD791A2C43006800629410 /* ItemUserDefault.swift */; };
-		30DDC44C2C45E0DF008767BD /* DataModel2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC44A2C45E0DF008767BD /* DataModel2.xcdatamodeld */; };
 		EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4F9239524DB00FB933B /* AppDelegate.swift */; };
 		EB2BE4FE239524DB00FB933B /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */; };
 		EB2BE501239524DB00FB933B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2BE4FF239524DB00FB933B /* Main.storyboard */; };
@@ -20,10 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		304CB3312CD017D200F1B41D /* DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel2.xcdatamodel; sourceTree = "<group>"; };
 		305834112C47410100FE641F /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		3090FA662C4B209500C930F4 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		30DD791A2C43006800629410 /* ItemUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemUserDefault.swift; sourceTree = "<group>"; };
-		30DDC44B2C45E0DF008767BD /* DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel2.xcdatamodel; sourceTree = "<group>"; };
 		EB2BE4F6239524DB00FB933B /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2BE4F9239524DB00FB933B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				30DD791A2C43006800629410 /* ItemUserDefault.swift */,
-				30DDC44A2C45E0DF008767BD /* DataModel2.xcdatamodeld */,
+				304CB3302CD017D200F1B41D /* DataModel2.xcdatamodeld */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = "App Brewery";
 				TargetAttributes = {
 					EB2BE4F5239524DB00FB933B = {
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2BE4FE239524DB00FB933B /* TodoListViewController.swift in Sources */,
-				30DDC44C2C45E0DF008767BD /* DataModel2.xcdatamodeld in Sources */,
+				304CB3322CD017D200F1B41D /* DataModel2.xcdatamodeld in Sources */,
 				305834122C47410100FE641F /* CategoryTableViewController.swift in Sources */,
 				30DD791B2C43006800629410 /* ItemUserDefault.swift in Sources */,
 				3090FA672C4B209500C930F4 /* SwipeTableViewController.swift in Sources */,
@@ -223,6 +223,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -285,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -418,14 +420,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		30DDC44A2C45E0DF008767BD /* DataModel2.xcdatamodeld */ = {
+		304CB3302CD017D200F1B41D /* DataModel2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				30DDC44B2C45E0DF008767BD /* DataModel2.xcdatamodel */,
+				304CB3312CD017D200F1B41D /* DataModel2.xcdatamodel */,
 			);
-			currentVersion = 30DDC44B2C45E0DF008767BD /* DataModel2.xcdatamodel */;
-			name = DataModel2.xcdatamodeld;
-			path = "/Users/roman/Developer/swift/developer/Angela/TodoApp/Todoey/Data Model/DataModel2.xcdatamodeld";
+			currentVersion = 304CB3312CD017D200F1B41D /* DataModel2.xcdatamodel */;
+			path = DataModel2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

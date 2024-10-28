@@ -3,7 +3,6 @@
 //  Todoey
 //
 //  Created by roman on 17.07.2024.
-//  Copyright © 2024 App Brewery. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +10,6 @@ import CoreData
 import SwipeCellKit
 
 class CategoryTableViewController: SwipeTableViewController {
-    //let categoryArray: [Category] = []
     var categoryArray = [Category]()
     var itemArray = [Item]()
     
@@ -24,7 +22,6 @@ class CategoryTableViewController: SwipeTableViewController {
         
         tableView.rowHeight = 60
     }
-
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,28 +33,20 @@ class CategoryTableViewController: SwipeTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell =  super.tableView(tableView, cellForRowAt: indexPath)
-      
         let category = categoryArray[indexPath.row]
-        
         cell.textLabel?.text = category.name
-        
         return cell
-        
     }
-    
     
     // MARK: - Table view manipulations
     
     func loadCategory(with request: NSFetchRequest<Category> = Category.fetchRequest()) {
-        
         do {
             categoryArray = try context.fetch(request)
         } catch {
             print("error while loading data with error \(error)")
         }
-        
         tableView.reloadData()
     }
     
@@ -68,18 +57,14 @@ class CategoryTableViewController: SwipeTableViewController {
         } catch {
             print("error while loading data with error \(error)")
         }
-        
-       // tableView.reloadData()
     }
     
     func saveCategory() {
-        
         do{
            try context.save()
         } catch {
             print("error while saving with error \(error)")
         }
-        
         tableView.reloadData()
     }
     // MARK: - Table view delegate
@@ -98,31 +83,13 @@ class CategoryTableViewController: SwipeTableViewController {
         }
     }
     
-        
-    
     override func updateModel(at indexPath: IndexPath) {
 
         let deleteCategory = categoryArray[indexPath.row]
-        
         print("удаляемая категория \(deleteCategory)")
-        
-        
-//        let deleteItem = itemArray.filter { $0.parentCategory }
-        
-              
-              
-        
-//        let deleteItem = itemArray.filter { number : Int -> Bool in
-//            return number
-//
-//        }
-        
-        
-      //  print(deleteItem)
         context.delete(deleteCategory)
         
         self.categoryArray.remove(at: indexPath.row)
-        
         do {
             try context.save()
             print("Data deleted successfully")
@@ -131,7 +98,6 @@ class CategoryTableViewController: SwipeTableViewController {
         }
         tableView.reloadData()
     }
-    
     
     // MARK: - Tabke view add button
     @IBAction func addCategoryButton(_ sender: UIBarButtonItem) {
@@ -146,17 +112,12 @@ class CategoryTableViewController: SwipeTableViewController {
             
             self.saveCategory()
         }
-        
         alert.addTextField { textFieldAction in
             textFieldAction.placeholder = "add new category" 
             textField = textFieldAction
-            
         }
-        
-        alert.addAction(action) 
-        
+        alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
-    
 }
 
